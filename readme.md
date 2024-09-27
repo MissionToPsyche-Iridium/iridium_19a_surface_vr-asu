@@ -27,6 +27,8 @@ For this project, our goal is to simulate what it would be like to be standing o
 ### Aaron
 ### Nathan
 ### Adam
+Let's all use the newest personal LTS version: [Unity 2022.3.48f1](https://unity.com/download)
+
 #### Answers from first meeting with Sponsor:
 Q: What else besides visual appearance?  
 A: Up to you, keep the scope in mind, don’t bite off more than you can chew. Pop-ups etc could be good add-ons, but keep the core project (just appearance) as the focus. Try to get something working by spring break and use the rest of the time for testing and debugging.
