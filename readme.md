@@ -1,16 +1,16 @@
 # Psyche Surface VR Project: Iridium Class 19a
 
 ## Team Members:
-Daniel Davies (drdavie1@asu.edu)  
-Aaron Godfrey (apgodfr1@asu.edu)  
-Nathan Hoffman (nmhoffm3@asu.edu)  
-Adam Shaeffer (ashaeffe@asu.edu)  
-Amit Sinha (amsinha@asu.edu)  
+Daniel Davies (<drdavie1@asu.edu>)  
+Aaron Godfrey (<apgodfr1@asu.edu>)  
+Nathan Hoffman (<nmhoffm3@asu.edu>)  
+Adam Shaeffer (<ashaeffe@asu.edu>)  
+Amit Sinha (<amsinha@asu.edu>)  
 
-Sponsor contact: Cassie Bowman (cbowman5@asu.edu)  
-Programmer Intern: Prasad Mahalpure (pmahalpu@asu.edu)  
-Instructor: Shijie Lu (shijielu@asu.edu)  
-Grader: Vishnu Batla (vbatla@asu.edu)  
+Sponsor contact: Cassie Bowman (<cbowman5@asu.edu>)  
+Programmer Intern: Prasad Mahalpure (<pmahalpu@asu.edu>)  
+Instructor: Shijie Lu (<shijielu@asu.edu>)  
+Grader: Vishnu Batla (<vbatla@asu.edu>)  
 
 ## Important Links
 - [Taiga Board](https://tree.taiga.io/project/danieldavies-nasa-surface-data-vr-capstone/backlog)
@@ -27,6 +27,22 @@ For this project, our goal is to simulate what it would be like to be standing o
 ### Aaron
 ### Nathan
 ### Adam
+#### Answers from first meeting with Sponsor:
+Q: What else besides visual appearance?  
+A: Up to you, keep the scope in mind, don’t bite off more than you can chew. Pop-ups etc could be good add-ons, but keep the core project (just appearance) as the focus. Try to get something working by spring break and use the rest of the time for testing and debugging.
+
+Q: What environment/language/toolkit?  
+A: Meta Quest /VRD MakerSpace. NASA 3d web based. Mars track, vesta track. Look at documentation for that stuff. Figure out what seems cool to work in and what dataset might be cool to work with. Osiris Rex?
+
+Q: What is the targeted user base?  
+A: Those interested in science among the general public, could be found in museums, etc.
+
+Q: How will the project be delivered?  
+A: Long term is to make it available to those who have their own headsets so some kind of public way to send it out.
+
+Q: What outcomes are expected?  
+A: Does it work? Reliable, well documented. It would be cool to be able to pull real data, maybe a stretch? Track what we learn, what we research, what we do. Will be wrapped into some of the sprint reports and presentations, and stuff like that.
+
 ### Gabe
 
 ## Getting Started:
