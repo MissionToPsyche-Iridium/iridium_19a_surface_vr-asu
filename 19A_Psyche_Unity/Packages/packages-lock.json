@@ -7,7 +7,7 @@
       "dependencies": {}
     },
     "com.unity.burst": {
-      "version": "1.8.18",
+      "version": "1.8.17",
       "depth": 1,
       "source": "registry",
       "dependencies": {
@@ -56,8 +56,8 @@
       "depth": 0,
       "source": "builtin",
       "dependencies": {
-        "com.unity.xr.oculus": "4.3.0",
-        "com.unity.xr.openxr": "1.12.1"
+        "com.unity.xr.oculus": "4.2.0",
+        "com.unity.xr.openxr": "1.12.0"
       }
     },
     "com.unity.ide.rider": {
@@ -259,7 +259,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.xr.legacyinputhelpers": {
-      "version": "2.1.11",
+      "version": "2.1.10",
       "depth": 1,
       "source": "registry",
       "dependencies": {
@@ -281,7 +281,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.xr.oculus": {
-      "version": "4.3.0",
+      "version": "4.2.0",
       "depth": 1,
       "source": "registry",
       "dependencies": {
