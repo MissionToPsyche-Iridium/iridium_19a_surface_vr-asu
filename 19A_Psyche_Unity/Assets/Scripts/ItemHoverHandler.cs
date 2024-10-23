@@ -8,9 +8,11 @@ public class ItemHoverHandler : MonoBehaviour
     private bool isOn = false;
     private float rstTime = 1;
     private float cooldown = -1;
+    private FacePlayer facePlayer;
     // Start is called before the first frame update
     void Start()
     {
+        //Initialization
         infoCanvas = GetComponentInChildren<Canvas>();
         if (!infoCanvas)
         {
@@ -18,12 +20,13 @@ public class ItemHoverHandler : MonoBehaviour
             return;
         }
         infoCanvas.enabled = false;
+        facePlayer = infoCanvas.GetComponent<FacePlayer>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        //Slight delay to prevent flickering UI
         if(cooldown == -1)
         {
             infoCanvas.enabled = isOn;
@@ -37,9 +40,15 @@ public class ItemHoverHandler : MonoBehaviour
         {
             cooldown = -1;
         }
-            
+        
+        //Make UI face player when it is on
+        if(isOn){
+            facePlayer.Activate();
+        }
     }
 
+
+    //Events that are called when player hovers or stops hovering over this item
     public void OnHoverEnter()
     {
         isOn = true;

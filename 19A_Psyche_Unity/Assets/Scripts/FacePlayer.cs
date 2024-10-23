@@ -11,8 +11,7 @@ public class FacePlayer : MonoBehaviour
         mainCam = Camera.main.transform;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Activate()
     {
         transform.LookAt(mainCam.position);
     }
