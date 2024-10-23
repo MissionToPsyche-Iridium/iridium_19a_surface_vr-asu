@@ -13,6 +13,7 @@ public class ItemSpawning : MonoBehaviour
     [SerializeField] private float ySpawnOffset = 0;
 
     [SerializeField] private float maxRayDist = 1000;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +24,7 @@ public class ItemSpawning : MonoBehaviour
 
     private void HandleSpawning()
     {
-        while(transform.position.z > zRange[1])
+        while(transform.position.z < zRange[1])
         {
             foreach (var item in items)
             {
@@ -37,7 +38,7 @@ public class ItemSpawning : MonoBehaviour
                 }
                 transform.position = new Vector3(xRange[0], transform.position.y, transform.position.z);
             }
-            transform.Translate(Vector3.forward * Random.Range(10, 100) * -1);
+            transform.Translate(Vector3.forward * Random.Range(10, 100));
         }
         
     }
