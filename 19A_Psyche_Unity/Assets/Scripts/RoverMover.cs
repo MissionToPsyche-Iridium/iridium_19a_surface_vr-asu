@@ -6,18 +6,18 @@ using UnityEngine.InputSystem;
 public class RoverMover : MonoBehaviour
 {
     [SerializeField] private float moveForce = 10f;
-    private Rigidbody rigidbody;
+    private Rigidbody rb;
 
     // Start is called before the first frame update
     void Start()
     {
-        rigidbody = GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody>();
     }
 
 
     public void OnForwardSelectStart()
     {
-        rigidbody.AddForce(Vector3.forward * moveForce);
+        rb.AddForce(Vector3.forward * moveForce);
         Debug.Log("TEST");
     }
 }
