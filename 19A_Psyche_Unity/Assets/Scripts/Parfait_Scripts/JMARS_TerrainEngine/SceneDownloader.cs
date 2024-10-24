@@ -281,9 +281,9 @@ namespace TerrainEngine{
         
         public void HeightMapToData(float[] data, string units)
         {
-            //PerPixelDataReader.float_arrays.Add(data);
-            //PerPixelDataReader.floatDataNames.Add("Elevation");
-            //PerPixelDataReader.floatDataUnits.Add(units);
+            // PerPixelDataReader.float_arrays.Add(data);
+            // PerPixelDataReader.floatDataNames.Add("Elevation");
+            // PerPixelDataReader.floatDataUnits.Add(units);
         }
         
         
