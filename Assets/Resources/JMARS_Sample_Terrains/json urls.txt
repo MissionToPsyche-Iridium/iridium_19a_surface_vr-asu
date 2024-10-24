@@ -1,0 +1,4 @@
+new_valles: http://cm.mars.asu.edu/api/vr/viewScene.php?access_key=vr-demo_0781060d45bb0dcb4822d3685aa3603f
+ceres_sample_terrain: http://cm.mars.asu.edu/api/vr/viewScene.php?access_key=vr-demo_1b24daf07505abd6da91a8a1251ee882
+mercury_sample_terrain: http://cm.mars.asu.edu/api/vr/viewScene.php?access_key=vr-demo_bdfa0dfda85908dcb3257bc8ca405f4c
+granite_wash: http://cm.mars.asu.edu/api/vr/viewScene.php?access_key=vr-demo_16867177743728b6796c284653b393cc
