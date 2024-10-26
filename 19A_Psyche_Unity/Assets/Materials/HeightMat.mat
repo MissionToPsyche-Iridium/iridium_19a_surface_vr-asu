@@ -117,12 +117,12 @@ Material:
     - _Surface: 0
     - _WorkflowMode: 1
     - _ZWrite: 1
-    - _length: 512
+    - _length: 513
     - _numTiles: 30
     - _offset: 0
-    - _scaleFactor: 0.0000020000002
+    - _scaleFactor: 0.000014000001
     - _scaleFactor2: 1
-    - _width: 1024
+    - _width: 1249
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
