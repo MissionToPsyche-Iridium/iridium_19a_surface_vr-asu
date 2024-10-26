@@ -22,10 +22,10 @@ namespace TerrainEngine
         public bool readingData = false; // If Per Pixel tool is enabled or not
         
         // Pins
-        public GameObject pins;
+        //public GameObject pins;
         public static List<Pin> pinList;
-        [SerializeField] private GameObject pinInfoPrefab;
-        [SerializeField] private GameObject pinPrefab;
+        //[SerializeField] private GameObject pinInfoPrefab;
+        //[SerializeField] private GameObject pinPrefab;
         [SerializeField] private GameObject platform;
 
         // Terrain variables
@@ -314,33 +314,33 @@ namespace TerrainEngine
             // }
             //else
             //{
-                pinList.Add(CreatePin(position, data));
+                //pinList.Add(CreatePin(position, data));
             //}
         }
 
-        public Pin CreatePin(Vector3 position, string data)
-        {
-            GameObject debugSphere = Instantiate(pinPrefab);
-            Vector3 debugSphereTransform = terrain.transform.TransformPoint(position);
-            debugSphere.transform.localPosition = debugSphereTransform;
-            debugSphere.transform.localScale = Vector3.one * 0.5f;
+        // public Pin CreatePin(Vector3 position, string data)
+        // {
+        //     GameObject debugSphere = Instantiate(pinPrefab);
+        //     Vector3 debugSphereTransform = terrain.transform.TransformPoint(position);
+        //     debugSphere.transform.localPosition = debugSphereTransform;
+        //     debugSphere.transform.localScale = Vector3.one * 0.5f;
 
-            GameObject newPinCanvas = Instantiate(pinInfoPrefab);
-            newPinCanvas.transform.position = new Vector3(debugSphereTransform.x,
-                debugSphereTransform.y + 5, debugSphereTransform.z);
+        //     GameObject newPinCanvas = Instantiate(pinInfoPrefab);
+        //     newPinCanvas.transform.position = new Vector3(debugSphereTransform.x,
+        //         debugSphereTransform.y + 5, debugSphereTransform.z);
             
-            Pin _pin = newPinCanvas.GetComponent<Pin>();   
-            _pin.pin = debugSphere;
-            _pin.panel = newPinCanvas;
-            _pin.position = position;
+        //     Pin _pin = newPinCanvas.GetComponent<Pin>();   
+        //     _pin.pin = debugSphere;
+        //     _pin.panel = newPinCanvas;
+        //     _pin.position = position;
             
-            // change text on prefab
-            _pin.pinNumber.text = "Pin #" + (pinList.Count+1).ToString();
-            _pin.data = data;
-            _pin.pinData.text = data;
+        //     // change text on prefab
+        //     _pin.pinNumber.text = "Pin #" + (pinList.Count+1).ToString();
+        //     _pin.data = data;
+        //     _pin.pinData.text = data;
 
-            return _pin;
-        }
+        //     return _pin;
+        // }
 
         /// <summary>
         /// Removes all pins from a terrain in singleplayer. 

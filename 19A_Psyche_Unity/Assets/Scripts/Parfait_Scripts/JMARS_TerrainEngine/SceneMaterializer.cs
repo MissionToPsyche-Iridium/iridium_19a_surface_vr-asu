@@ -20,7 +20,7 @@ namespace TerrainEngine{
         public Slider exaggerationSlider;
 
         [SerializeField] public Material heightMaterial;
-        [HideInInspector] public JMARSScene selectedScene;
+        public JMARSScene selectedScene;
 
         public GameObject terrain;
         public GameObject tiles;

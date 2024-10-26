@@ -50,46 +50,46 @@ namespace TerrainEngine
         /// Instantiates nomenclature data on terrain selection.
         /// </summary>
         /// <param name="data">Nomenclature Layer Data</param>
-        public void InstantiateNomenclature(JMARSScene.Layer.LayerData data)
-        {
-            Texture2D heightTexture = material.GetTexture("_HeightMap") as Texture2D;
+        // public void InstantiateNomenclature(JMARSScene.Layer.LayerData data)
+        // {
+        //     Texture2D heightTexture = material.GetTexture("_HeightMap") as Texture2D;
             
-            foreach (var values in data.text_data)
-            {
-                // get (x, z) position in world space from texture space
-                float x_position = ((float)values.x / heightTexture.width)-0.5f;
-                float z_position = ((float)(values.y - heightTexture.height)/heightTexture.height)+0.5f;
+        //     foreach (var values in data.text_data)
+        //     {
+        //         // get (x, z) position in world space from texture space
+        //         float x_position = ((float)values.x / heightTexture.width)-0.5f;
+        //         float z_position = ((float)(values.y - heightTexture.height)/heightTexture.height)+0.5f;
                 
-                //get height value at (x, y) from depth texture
-                float heightValue = heightTexture.GetPixel((int)values.x, (int)(heightTexture.height - values.y)).r;
-                float h_t = heightValue * material.GetFloat("_scaleFactor"); 
+        //         //get height value at (x, y) from depth texture
+        //         float heightValue = heightTexture.GetPixel((int)values.x, (int)(heightTexture.height - values.y)).r;
+        //         float h_t = heightValue * material.GetFloat("_scaleFactor"); 
                 
-                // (x, y, z) position of nomenclature in world space
-                Vector3 position = new Vector3(x_position, h_t, z_position);
-                Vector3 newPosition = terrain.transform.TransformPoint(position);
+        //         // (x, y, z) position of nomenclature in world space
+        //         Vector3 position = new Vector3(x_position, h_t, z_position);
+        //         Vector3 newPosition = terrain.transform.TransformPoint(position);
                 
-                // instantiate pin obj
-                GameObject pin = Instantiate(pinPrefab, nomenclatureParent.transform, true);
-                pin.transform.localPosition = newPosition;
-                pin.transform.localScale = Vector3.one * 0.5f;
-                pin.gameObject.name = values.name;
+        //         // instantiate pin obj
+        //         GameObject pin = Instantiate(pinPrefab, nomenclatureParent.transform, true);
+        //         pin.transform.localPosition = newPosition;
+        //         pin.transform.localScale = Vector3.one * 0.5f;
+        //         pin.gameObject.name = values.name;
                 
-                // instantiate nomenclature object
-                GameObject panel = Instantiate(nomenclaturePrefab, pin.transform, true);
-                panel.transform.position = new Vector3(newPosition.x,
-                    newPosition.y + 4, newPosition.z);
+        //         // instantiate nomenclature object
+        //         GameObject panel = Instantiate(nomenclaturePrefab, pin.transform, true);
+        //         panel.transform.position = new Vector3(newPosition.x,
+        //             newPosition.y + 4, newPosition.z);
                 
-                Nomenclature n = panel.GetComponent<Nomenclature>();
-                n.pin = pin;
-                n.panel = panel;
-                n.SetName(values.name);
-                n.SetMaterials();
-                n.position = position;
-                nomenclaturePins.Add(n);
-            }
+        //         Nomenclature n = panel.GetComponent<Nomenclature>();
+        //         n.pin = pin;
+        //         n.panel = panel;
+        //         n.SetName(values.name);
+        //         n.SetMaterials();
+        //         n.position = position;
+        //         nomenclaturePins.Add(n);
+        //     }
 
-            hasNomenclature = true;
-        }
+        //     hasNomenclature = true;
+        // }
 
         /// <summary>
         /// Deletes nomenclature gameobjects and clears nomenclature data list. 

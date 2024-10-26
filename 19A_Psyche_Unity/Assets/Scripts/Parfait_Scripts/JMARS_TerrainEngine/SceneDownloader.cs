@@ -104,7 +104,7 @@ namespace TerrainEngine{
                     //print("SceneSession.READY");
                     SceneMaterializer.singleton.SetMaterials(scene);
                     SceneMaterializer.singleton.selectedScene = scene;
-                    NomenclatureDataReader.singleton.InstantiateNomenclature(nomenclature);
+                    //NomenclatureDataReader.singleton.InstantiateNomenclature(nomenclature);
                     
                     //InfoPanel.Panel.ChangeName(scene);
                     ScaleBarPrefabs.singleton.CalculatePrefabs(scene);

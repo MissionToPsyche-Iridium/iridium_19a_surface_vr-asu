@@ -216,10 +216,10 @@ namespace TerrainEngine
             //TerrainMenu.layersDelegate.Invoke(currentScene);
             SceneMaterializer.singleton.selectedScene = currentScene;
             SceneMaterializer.singleton.SetMaterials(currentScene);
-            NomenclatureDataReader.singleton.InstantiateNomenclature(SceneDownloader.singleton.nomenclature);
+            //NomenclatureDataReader.singleton.InstantiateNomenclature(SceneDownloader.singleton.nomenclature);
             
             //InfoPanel.Panel.ChangeName(currentScene);
-            ScaleBarPrefabs.singleton.CalculatePrefabs(currentScene);
+            //ScaleBarPrefabs.singleton.CalculatePrefabs(currentScene);
             //LoadingBar.DoneLoading();
             
         }
