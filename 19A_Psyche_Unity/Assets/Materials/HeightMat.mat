@@ -120,7 +120,7 @@ Material:
     - _length: 512
     - _numTiles: 30
     - _offset: 0
-    - _scaleFactor: 0.000014000001
+    - _scaleFactor: 0.0000020000002
     - _scaleFactor2: 1
     - _width: 1024
     m_Colors:
