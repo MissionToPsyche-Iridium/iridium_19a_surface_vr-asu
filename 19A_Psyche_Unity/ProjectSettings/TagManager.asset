@@ -6,11 +6,12 @@ TagManager:
   tags:
   - Item
   - Terrain
+  - Anchor
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - TerrainMask
   - Water
   - UI
   - 
