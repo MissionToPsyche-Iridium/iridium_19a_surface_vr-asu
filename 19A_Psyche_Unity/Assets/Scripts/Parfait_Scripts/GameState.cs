@@ -26,10 +26,10 @@ public class GameState : MonoBehaviour
 
     // Desktop / VR rig variabes
     [SerializeField] private GameObject xrRig;
-    [SerializeField] private GameObject armature;
-    [SerializeField] private Canvas mainCanvas;
-    [SerializeField] private GameObject xrRigPrefab;
-    [SerializeField] private GameObject desktopPrefab;
+    //[SerializeField] private GameObject armature;
+    //[SerializeField] private Canvas mainCanvas;
+    //[SerializeField] private GameObject xrRigPrefab;
+    //[SerializeField] private GameObject desktopPrefab;
 
     void Awake()
     {
@@ -57,13 +57,13 @@ public class GameState : MonoBehaviour
         {
             case BuildType.VR:
                 IsVR = true;
-                mainCanvas.renderMode = RenderMode.WorldSpace;
+                //mainCanvas.renderMode = RenderMode.WorldSpace;
                 print("VR build");
                 break;
             case BuildType.Desktop:
                 IsVR = false;
-                mainCanvas.renderMode = RenderMode.ScreenSpaceOverlay;
-                mainCanvas.GetComponent<CanvasScaler>().matchWidthOrHeight = 1;
+                //mainCanvas.renderMode = RenderMode.ScreenSpaceOverlay;
+                //mainCanvas.GetComponent<CanvasScaler>().matchWidthOrHeight = 1;
                 print("Desktop build");
                 break;
             default:
@@ -74,13 +74,13 @@ public class GameState : MonoBehaviour
     
     private void SetUpMeshDesktop()
     {
-        armature.SetActive(true);
+        // armature.SetActive(true);
         xrRig.SetActive(false);
     }
 
     private void SetUpMeshVR()
     {
-        armature.SetActive(false);
+        // armature.SetActive(false);
         xrRig.SetActive(true);
     }
 }

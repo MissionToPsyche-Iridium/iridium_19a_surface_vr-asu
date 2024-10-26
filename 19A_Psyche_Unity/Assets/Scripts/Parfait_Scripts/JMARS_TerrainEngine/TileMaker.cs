@@ -5,7 +5,7 @@ namespace TerrainEngine{
     public class TileMaker : MonoBehaviour {
         public int tileSize = 64; //width and height of tile (in number of vertices)
         public int numTiles = 5; //number of tiles in X and Y dimensions e.g., 5x5
-        public bool rescale;
+        //public bool rescale;
 
         private int[] triangles;
         private Vector3[] vertices;
