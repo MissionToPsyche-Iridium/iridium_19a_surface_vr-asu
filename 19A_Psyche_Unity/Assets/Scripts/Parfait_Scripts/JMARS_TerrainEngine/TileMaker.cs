@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit.Locomotion.Teleportation;
 
 namespace TerrainEngine{
 
@@ -14,6 +15,8 @@ namespace TerrainEngine{
 
         GameObject[,] tiles;
         public Material material;
+
+        
         
         void MakeVerticesTriangles(float scale) {
             triangles = new int[2 * (tileSize - 1) * (tileSize - 1) * 3 * 2]; //last *2 is added for the wall
@@ -126,6 +129,7 @@ namespace TerrainEngine{
 
             tile.AddComponent<MeshCollider>();
             tile.GetComponent<MeshCollider>().sharedMesh = tile.GetComponent<MeshFilter>().mesh;
+            
         }
 
         void Awake() {
@@ -148,6 +152,7 @@ namespace TerrainEngine{
                 }
             }
         }
+
 
         private void Update() {
             var heightTexture = material.GetTexture("_HeightMap"); //zData
