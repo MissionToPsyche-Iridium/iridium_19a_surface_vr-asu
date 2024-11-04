@@ -21,12 +21,13 @@ namespace TerrainEngine{
         private void Awake() {
             DontDestroyOnLoad(this);
             singleton = this;
-    
+            
             resolution = new Vector2Int(200, 200);
             texture = new RenderTexture(200, 200, 16);
             quads = new List<GameObject>();
             cam = gameObject.AddComponent<Camera>();
             cam.transform.position = Vector3.zero;
+            //singleton.gameObject.transform.position = new Vector3(0,-1000,0);
             cam.transform.rotation = Quaternion.LookRotation(Vector3.forward);
             cam.backgroundColor = Color.black;
             cam.clearFlags = CameraClearFlags.SolidColor;
@@ -43,7 +44,9 @@ namespace TerrainEngine{
             {
                 UpdateLayers(scene);
                 UpdateResolution(scene);
-            } //return;
+                transform.position = Vector3.down * 1000;
+            }
+            //return;
             // ReSharper disable once Unity.PerformanceCriticalCodeInvocation
             
             
@@ -62,7 +65,7 @@ namespace TerrainEngine{
     
         private void UpdateLayers(JMARSScene scene) {
             // ReSharper disable once Unity.NoNullPropagation
-    
+            transform.position = Vector3.zero;
             var layers = scene.layers;
 
             if (layers == null) return;
@@ -114,7 +117,7 @@ namespace TerrainEngine{
                 material.SetColor(color, new Color(material.color.r, material.color.g, material.color.b, layer.transparency));
                 quads[i] = quad;
             }
-            
+
             
         }
     

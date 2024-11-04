@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System;
+using Unity.XR.CoreUtils;
+using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit.Locomotion.Teleportation;
 
 namespace TerrainEngine{
@@ -16,7 +18,7 @@ namespace TerrainEngine{
         GameObject[,] tiles;
         public Material material;
 
-        
+        public String layer = "TerrainMask";
         
         void MakeVerticesTriangles(float scale) {
             triangles = new int[2 * (tileSize - 1) * (tileSize - 1) * 3 * 2]; //last *2 is added for the wall
@@ -145,7 +147,7 @@ namespace TerrainEngine{
                         new Vector3((i + 0.5f) / numTiles - 0.5f, 0, (j + 0.5f) / numTiles - 0.5f);
                     tile.GetComponent<MeshRenderer>().material = material;
                     tile.transform.localScale = Vector3.one;
-
+                    tile.layer = LayerMask.NameToLayer(layer);
                     MakeCollider(tile);
 
                     tiles[j, i] = tile;

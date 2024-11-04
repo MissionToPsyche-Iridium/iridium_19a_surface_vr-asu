@@ -9,6 +9,7 @@ public class FacePlayer : MonoBehaviour
     void Start()
     {
         mainCam = Camera.main.transform;
+        
     }
 
     public void Activate()

@@ -39,6 +39,12 @@ namespace TerrainEngine{
             StartCoroutine(LoadStartingTerrain(startingTerrain));
         }
 
+
+        public void LoadTerrain(DataPackBehaviour newTerrain)
+        {
+            startingTerrain = newTerrain;
+            StartCoroutine(LoadStartingTerrain(startingTerrain));
+        }
         private void Update() {
             
             //could probably turn this into an event listener instead of an update function
