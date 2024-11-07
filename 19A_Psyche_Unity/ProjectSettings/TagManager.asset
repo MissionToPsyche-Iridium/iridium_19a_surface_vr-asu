@@ -7,6 +7,8 @@ TagManager:
   - Item
   - Terrain
   - Anchor
+  - Rover
+  - RoverStart
   layers:
   - Default
   - TransparentFX
