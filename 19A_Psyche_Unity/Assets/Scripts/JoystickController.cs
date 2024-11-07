@@ -8,14 +8,21 @@ public class JoystickController : MonoBehaviour
 {
     
     public Transform topOfJoystick;
+    public Transform anchor;
     public Transform leftHand;
     public Transform rightHand;
+    public Transform forwardDir;
+    public Transform backwardDir;
+    public Transform leftDir;
+    public Transform rightDir;
+
 
     [SerializeField] private float forwardTiltAxis = 0;
     [SerializeField] private float sideTiltAxis = 0;
 
-    private Vector3 anchor;
+    
     private Rigidbody topRb;
+    private Quaternion startingRot;
 
     private bool leftHandGrabbed = false;
     private bool rightHandGrabbed = false;
@@ -24,32 +31,17 @@ public class JoystickController : MonoBehaviour
     void Start()
     {
         topRb = topOfJoystick.gameObject.GetComponent<Rigidbody>();
-        anchor = topOfJoystick.GetComponent<CharacterJoint>().anchor;
+        startingRot = anchor.localRotation;
     }
 
     void Update()
     {
-        forwardTiltAxis = Vector3.Angle(anchor, new Vector3(topOfJoystick.position.x, topOfJoystick.position.y, 0));
-        if(forwardTiltAxis < 355 && forwardTiltAxis > 290)
-        {
-            forwardTiltAxis = Mathf.Abs(forwardTiltAxis -360);
-            Debug.Log("Backward: " + forwardTiltAxis);
-        }
-        else if(forwardTiltAxis > 5 && forwardTiltAxis < 74)
-        {
-            Debug.Log("Forward: " + forwardTiltAxis);
-        }
 
-        sideTiltAxis = Vector3.Angle(anchor, new Vector3(0, topOfJoystick.position.y, topOfJoystick.position.z));
-        if(sideTiltAxis < 355 && sideTiltAxis > 290)
-        {
-            sideTiltAxis = Mathf.Abs(sideTiltAxis -360);
-            Debug.Log("Right: " + sideTiltAxis);
-        }
-        else if(sideTiltAxis > 5 && sideTiltAxis < 74)
-        {
-            Debug.Log("Left: " + sideTiltAxis);
-        }
+        
+        forwardTiltAxis = Vector3.Angle(topOfJoystick.up, anchor.position);
+
+        sideTiltAxis = Vector3.Angle(topOfJoystick.right, anchor.position);
+        
         if(leftHandGrabbed)
         {
             
@@ -58,8 +50,9 @@ public class JoystickController : MonoBehaviour
         {
             
         }
-        Debug.Log("Forward: " + forwardTiltAxis);
-        Debug.Log("Side: " + sideTiltAxis);
+        //Debug.Log("Forward: " + forwardTiltAxis);
+        //Debug.Log("Side: " + sideTiltAxis);
+        Debug.Log("Forward: " + Vector3.Distance(forwardDir.position, topOfJoystick.position));
     }
 
     public void OnHandGrab()
