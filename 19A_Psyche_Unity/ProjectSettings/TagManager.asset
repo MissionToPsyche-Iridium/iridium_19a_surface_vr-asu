@@ -9,6 +9,7 @@ TagManager:
   - Anchor
   - Rover
   - RoverStart
+  - RoverResetButton
   layers:
   - Default
   - TransparentFX
