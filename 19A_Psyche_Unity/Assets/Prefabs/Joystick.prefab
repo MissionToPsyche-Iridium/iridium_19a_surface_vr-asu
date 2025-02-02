@@ -238,7 +238,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1778995898030768259}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.57964057, y: -0.40499008, z: -0.40499002, w: 0.5796403}
+  m_LocalRotation: {x: -0.5795406, y: -0.4049175, z: -0.4050589, w: 0.5797429}
   m_LocalPosition: {x: 2500.679, y: 510.435, z: -1000.279}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -295,8 +295,8 @@ MonoBehaviour:
   backwardDir: {fileID: 7392713920563505038}
   leftDir: {fileID: 3185467526257239625}
   rightDir: {fileID: 4159131727173625237}
-  forwardTiltAxis: 0
-  sideTiltAxis: 0
+  controlledObject: {fileID: 0}
+  joystickDeadzone: 0.05
 --- !u!1 &1843409615097561535
 GameObject:
   m_ObjectHideFlags: 0

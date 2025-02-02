@@ -13,55 +13,50 @@ public class JoystickController : MonoBehaviour
     public Transform leftDir;
     public Transform rightDir;
 
+    public GameObject controlledObject;
 
-    public float forwardTiltAxis = 0;
-    public float sideTiltAxis = 0;
-
-    private Transform roverStart;
-    private GameObject rover;
-    private Rigidbody roverRb;
-    
     private Rigidbody topRb;
+    private Rigidbody controlledObjectRb;
+    private ReactToJoystick controlledObjectReact;
 
-    [SerializeField] private float roverForceMult = 10f;
+    private float forwardTiltAxis = 0;
+    private float sideTiltAxis = 0;
+    private bool isGrabbed = false;
+
+    [SerializeField] private float joystickDeadzone = 0.05f;
     
 
     void Start()
     {
         topRb = topOfJoystick.gameObject.GetComponent<Rigidbody>();
-        rover = GameObject.FindGameObjectWithTag("Rover");
-        roverRb = rover.GetComponent<Rigidbody>();
+        controlledObjectRb = controlledObject.GetComponent<Rigidbody>();
+        controlledObjectReact = controlledObject.GetComponent<ReactToJoystick>();
     }
 
     void Update()
     {
-
-        
-        forwardTiltAxis = (Vector3.Distance(backwardDir.position, topOfJoystick.position) - Vector3.Distance(forwardDir.position, topOfJoystick.position))/0.25f;
-        sideTiltAxis = (Vector3.Distance(leftDir.position, topOfJoystick.position) - Vector3.Distance(rightDir.position, topOfJoystick.position))/0.25f;
-        
-        Debug.Log("Forward: " + forwardTiltAxis);
-        Debug.Log("Side: " + sideTiltAxis);
-
-        if(forwardTiltAxis > 0.05 || forwardTiltAxis < -0.05)
+        if(isGrabbed)
         {
-            roverRb.AddForce(rover.transform.forward*forwardTiltAxis*roverForceMult, ForceMode.Acceleration);
+            forwardTiltAxis = (Vector3.Distance(backwardDir.position, topOfJoystick.position) - Vector3.Distance(forwardDir.position, topOfJoystick.position)) / 0.25f;
+            sideTiltAxis = (Vector3.Distance(leftDir.position, topOfJoystick.position) - Vector3.Distance(rightDir.position, topOfJoystick.position)) / 0.25f;
+            controlledObjectReact.AcceptInput(forwardTiltAxis, sideTiltAxis, joystickDeadzone);
+            Debug.Log("Forward: " + forwardTiltAxis);
+            Debug.Log("Side: " + sideTiltAxis);
         }
-        if(sideTiltAxis > 0.05 || sideTiltAxis < -0.05)
-        {
-            roverRb.AddForce(rover.transform.right*sideTiltAxis*roverForceMult, ForceMode.Acceleration);
-        }
+        
     }
 
     public void OnHandGrab()
     {
         topRb.constraints = RigidbodyConstraints.None;
-        roverRb.constraints = RigidbodyConstraints.FreezeRotation;
+        controlledObjectRb.constraints = RigidbodyConstraints.FreezeRotation;
+        isGrabbed = true;
     }
 
     public void OnHandRelease()
     {
+        isGrabbed = false;
         topRb.constraints = RigidbodyConstraints.FreezeRotation;
-        roverRb.velocity = Vector3.zero;
+        controlledObjectRb.velocity = Vector3.zero;
     }
 }

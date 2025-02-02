@@ -1072,6 +1072,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 300a768912382b94f8774b7b70d7f6b8, type: 3}
+--- !u!1 &385452560 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4862456071560776989, guid: 300a768912382b94f8774b7b70d7f6b8, type: 3}
+  m_PrefabInstance: {fileID: 385452559}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &447668419 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4510725769794655452, guid: 6e3f8098fc6bf0b4192db646041029db, type: 3}
@@ -1642,9 +1647,9 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 25935083209685852, guid: f4e79c30fd8e57b42a6dbada0d6cd7fb, type: 3}
-      propertyPath: roverForceMult
-      value: 10
-      objectReference: {fileID: 0}
+      propertyPath: controlledObject
+      value: 
+      objectReference: {fileID: 385452560}
     - target: {fileID: 1778995898030768259, guid: f4e79c30fd8e57b42a6dbada0d6cd7fb, type: 3}
       propertyPath: m_Name
       value: Joystick
