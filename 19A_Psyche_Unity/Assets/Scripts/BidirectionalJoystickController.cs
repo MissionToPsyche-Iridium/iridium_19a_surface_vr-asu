@@ -1,17 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UIElements;
 
-public class JoystickController : MonoBehaviour
+public class BidirectionalJoystickController : MonoBehaviour
 {
-    
     public Transform topOfJoystick;
-    public Transform forwardDir;
-    public Transform backwardDir;
-    public Transform leftDir;
-    public Transform rightDir;
+    public Transform positiveDir;
+    public Transform negativeDir;
 
     public GameObject controlledObject;
 
@@ -19,16 +14,20 @@ public class JoystickController : MonoBehaviour
     private Rigidbody controlledObjectRb;
     private ReactToJoystick controlledObjectReact;
 
-    private float forwardTiltAxis = 0;
-    private float sideTiltAxis = 0;
+    private float tiltAxis = 0;
     private bool isGrabbed = false;
 
+    private Quaternion startingRot;
+
     [SerializeField] private float joystickDeadzone = 0.05f;
-    
+    [SerializeField] bool isLeftRight = false;
+
 
     void Start()
     {
+        
         topRb = topOfJoystick.gameObject.GetComponent<Rigidbody>();
+        startingRot = topOfJoystick.rotation;
         controlledObjectRb = controlledObject.GetComponent<Rigidbody>();
         controlledObjectReact = controlledObject.GetComponent<ReactToJoystick>();
     }
@@ -37,9 +36,15 @@ public class JoystickController : MonoBehaviour
     {
         if (isGrabbed)
         {
-            forwardTiltAxis = (Vector3.Distance(backwardDir.position, topOfJoystick.position) - Vector3.Distance(forwardDir.position, topOfJoystick.position)) / 0.25f;
-            sideTiltAxis = (Vector3.Distance(leftDir.position, topOfJoystick.position) - Vector3.Distance(rightDir.position, topOfJoystick.position)) / 0.25f;
-            controlledObjectReact.AcceptInput(forwardTiltAxis, sideTiltAxis, joystickDeadzone);
+            tiltAxis = (Vector3.Distance(negativeDir.position, topOfJoystick.position) - Vector3.Distance(positiveDir.position, topOfJoystick.position)) / 0.25f;
+            if (!isLeftRight)
+            {
+                controlledObjectReact.AcceptInput(tiltAxis, 0, joystickDeadzone);
+            }
+            else
+            {
+                controlledObjectReact.AcceptInput(0, tiltAxis, joystickDeadzone);
+            }
         }
     }
 
@@ -53,6 +58,7 @@ public class JoystickController : MonoBehaviour
     public void OnHandRelease()
     {
         isGrabbed = false;
+        topOfJoystick.rotation = startingRot;
         topRb.constraints = RigidbodyConstraints.FreezeRotation;
         controlledObjectRb.velocity = Vector3.zero;
     }

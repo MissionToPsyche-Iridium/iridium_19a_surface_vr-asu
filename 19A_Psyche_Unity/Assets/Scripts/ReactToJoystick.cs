@@ -10,6 +10,8 @@ public class ReactToJoystick : MonoBehaviour
     [SerializeField] private bool isRover;
     [SerializeField] private float forceMultiplier = 10f;
 
+    [SerializeField] private float rotationStrength = 5f;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -19,14 +21,21 @@ public class ReactToJoystick : MonoBehaviour
     {
         if (isRover)
         {
+            gameObject.SetActive(true);
             if (forwardTiltAxis > joystickDeadzone || forwardTiltAxis < -joystickDeadzone)
             {
-                rb.AddForce(transform.forward * forwardTiltAxis * forceMultiplier, ForceMode.Acceleration);
+                rb.AddForce(transform.forward * forwardTiltAxis * forceMultiplier, ForceMode.Force);
             }
             if (sideTiltAxis > joystickDeadzone || sideTiltAxis < -joystickDeadzone)
             {
-                rb.AddForce(transform.right * sideTiltAxis * forceMultiplier, ForceMode.Acceleration);
+                //rb.AddForce(transform.right * sideTiltAxis * forceMultiplier, ForceMode.Force);
+                transform.Rotate(transform.up, rotationStrength*sideTiltAxis);
             }
         }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log(collision.gameObject);
     }
 }

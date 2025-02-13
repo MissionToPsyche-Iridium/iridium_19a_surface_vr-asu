@@ -1,0 +1,139 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &2408472757736887152
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 25935083209685852, guid: f4e79c30fd8e57b42a6dbada0d6cd7fb, type: 3}
+      propertyPath: leftDir
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 25935083209685852, guid: f4e79c30fd8e57b42a6dbada0d6cd7fb, type: 3}
+      propertyPath: rightDir
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1778995898030768259, guid: f4e79c30fd8e57b42a6dbada0d6cd7fb, type: 3}
+      propertyPath: m_Name
+      value: BidirectionalJoystick
+      objectReference: {fileID: 0}
+    - target: {fileID: 4148050495210321028, guid: f4e79c30fd8e57b42a6dbada0d6cd7fb, type: 3}
+      propertyPath: m_Swing1Limit.limit
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6116162123947919259, guid: f4e79c30fd8e57b42a6dbada0d6cd7fb, type: 3}
+      propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 6320503304313899465}
+    - target: {fileID: 6116162123947919259, guid: f4e79c30fd8e57b42a6dbada0d6cd7fb, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 6320503304313899465}
+    - target: {fileID: 6116162123947919259, guid: f4e79c30fd8e57b42a6dbada0d6cd7fb, type: 3}
+      propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnHandRelease
+      objectReference: {fileID: 0}
+    - target: {fileID: 6116162123947919259, guid: f4e79c30fd8e57b42a6dbada0d6cd7fb, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnHandGrab
+      objectReference: {fileID: 0}
+    - target: {fileID: 6116162123947919259, guid: f4e79c30fd8e57b42a6dbada0d6cd7fb, type: 3}
+      propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: BidirectionalJoystickController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6116162123947919259, guid: f4e79c30fd8e57b42a6dbada0d6cd7fb, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: BidirectionalJoystickController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6761035020561868786, guid: f4e79c30fd8e57b42a6dbada0d6cd7fb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6761035020561868786, guid: f4e79c30fd8e57b42a6dbada0d6cd7fb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6761035020561868786, guid: f4e79c30fd8e57b42a6dbada0d6cd7fb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6761035020561868786, guid: f4e79c30fd8e57b42a6dbada0d6cd7fb, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5797429
+      objectReference: {fileID: 0}
+    - target: {fileID: 6761035020561868786, guid: f4e79c30fd8e57b42a6dbada0d6cd7fb, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.5795406
+      objectReference: {fileID: 0}
+    - target: {fileID: 6761035020561868786, guid: f4e79c30fd8e57b42a6dbada0d6cd7fb, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.4049175
+      objectReference: {fileID: 0}
+    - target: {fileID: 6761035020561868786, guid: f4e79c30fd8e57b42a6dbada0d6cd7fb, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.4050589
+      objectReference: {fileID: 0}
+    - target: {fileID: 6761035020561868786, guid: f4e79c30fd8e57b42a6dbada0d6cd7fb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -89.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 6761035020561868786, guid: f4e79c30fd8e57b42a6dbada0d6cd7fb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6761035020561868786, guid: f4e79c30fd8e57b42a6dbada0d6cd7fb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -69.883
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 25935083209685852, guid: f4e79c30fd8e57b42a6dbada0d6cd7fb, type: 3}
+    m_RemovedGameObjects:
+    - {fileID: 5240928562476418963, guid: f4e79c30fd8e57b42a6dbada0d6cd7fb, type: 3}
+    - {fileID: 7967958852520367490, guid: f4e79c30fd8e57b42a6dbada0d6cd7fb, type: 3}
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1778995898030768259, guid: f4e79c30fd8e57b42a6dbada0d6cd7fb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6320503304313899465}
+  m_SourcePrefab: {fileID: 100100000, guid: f4e79c30fd8e57b42a6dbada0d6cd7fb, type: 3}
+--- !u!4 &84059147205325847 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2325614904873543527, guid: f4e79c30fd8e57b42a6dbada0d6cd7fb, type: 3}
+  m_PrefabInstance: {fileID: 2408472757736887152}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4169451865766663155 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1778995898030768259, guid: f4e79c30fd8e57b42a6dbada0d6cd7fb, type: 3}
+  m_PrefabInstance: {fileID: 2408472757736887152}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6320503304313899465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4169451865766663155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cddaeb17d94a634b950cc85a0f2fbdc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  topOfJoystick: {fileID: 84059147205325847}
+  positiveDir: {fileID: 8105365896568363026}
+  negativeDir: {fileID: 5184961563145614590}
+  controlledObject: {fileID: 0}
+  joystickDeadzone: 0.05
+  isLeftRight: 0
+--- !u!4 &5184961563145614590 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7392713920563505038, guid: f4e79c30fd8e57b42a6dbada0d6cd7fb, type: 3}
+  m_PrefabInstance: {fileID: 2408472757736887152}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8105365896568363026 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5841334059377691490, guid: f4e79c30fd8e57b42a6dbada0d6cd7fb, type: 3}
+  m_PrefabInstance: {fileID: 2408472757736887152}
+  m_PrefabAsset: {fileID: 0}

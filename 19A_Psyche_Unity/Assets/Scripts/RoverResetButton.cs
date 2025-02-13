@@ -8,7 +8,7 @@ public class RoverResetButton : MonoBehaviour
     bool isPressed;
 
     Transform roverStart;
-    GameObject rover;
+    public GameObject rover;
     Rigidbody roverRb;
 
     private Transform unpressed;
@@ -25,7 +25,7 @@ public class RoverResetButton : MonoBehaviour
         button = transform.GetChild(3);
 
         roverStart = GameObject.FindGameObjectWithTag("RoverStart").transform;
-        rover = GameObject.FindGameObjectWithTag("Rover");
+        //rover = GameObject.FindGameObjectWithTag("Rover");
         roverRb = rover.GetComponent<Rigidbody>();
     }
 
@@ -37,6 +37,7 @@ public class RoverResetButton : MonoBehaviour
         rover.transform.rotation = roverStart.rotation;
         roverRb.velocity = Vector3.zero;
         roverRb.constraints = RigidbodyConstraints.FreezeAll;
+        rover.SetActive(false);
     }
 
     public void OnButtonRelease()
