@@ -34,7 +34,7 @@ public class ItemSpawning : MonoBehaviour
                     {
                         SpawnItem(item);
                     }
-                    transform.Translate(Vector3.right * Random.Range(10, 100));
+                    transform.Translate(Vector3.right * Random.Range(1000, 10000));
                 }
                 transform.position = new Vector3(xRange[0], transform.position.y, transform.position.z);
             }
