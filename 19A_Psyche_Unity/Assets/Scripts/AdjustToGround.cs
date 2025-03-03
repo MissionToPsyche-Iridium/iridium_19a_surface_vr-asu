@@ -4,23 +4,19 @@ using UnityEngine;
 
 public class AdjustToGround : MonoBehaviour
 {
-    
 
-
-    void Start()
-    {
-        
-    }
-
+    [SerializeField] private float groundRaycastDistance = 2f;
+    [SerializeField] private float rotationChangeSpeed = 2f;
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
-        RaycastHit hit;
-
-        if (Physics.Raycast(transform.position, -Vector3.up, out hit, 100.0f))
+        RaycastHit belowHit;
+        Quaternion slopeRotationFactor = Quaternion.FromToRotation(Vector3.up, transform.up);
+        Vector3 groundOriginOffset = new Vector3(0, 0, 0);
+        if (Physics.Raycast(transform.position + (slopeRotationFactor * groundOriginOffset), -transform.up, out belowHit, groundRaycastDistance))
         {
-            Debug.Log(hit.normal);
+            Quaternion lookRotation = Quaternion.LookRotation(Vector3.Cross(transform.right, belowHit.normal), belowHit.normal);
+            transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, rotationChangeSpeed * Time.deltaTime);
         }
-
     }
 }
