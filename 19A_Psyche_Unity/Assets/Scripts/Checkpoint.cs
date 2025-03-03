@@ -7,10 +7,13 @@ public class Checkpoint : MonoBehaviour
     private GameObject manager;
     private bool hasTriggered = false;
 
+    private ParticleSystem particles;
+
 
     void Start()
     {
         manager = GameObject.FindGameObjectWithTag("CheckpointManager");
+        particles = GetComponentInChildren<ParticleSystem>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -20,7 +23,7 @@ public class Checkpoint : MonoBehaviour
             manager.GetComponent<CheckpointManager>().score++;
             hasTriggered = true;
             Debug.Log(manager.GetComponent<CheckpointManager>().score);
-            gameObject.SetActive(false);
+            particles.Play();
         }
     }
 
