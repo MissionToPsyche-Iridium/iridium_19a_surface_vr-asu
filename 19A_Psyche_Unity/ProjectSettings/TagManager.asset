@@ -10,6 +10,7 @@ TagManager:
   - Rover
   - RoverStart
   - RoverResetButton
+  - CheckpointManager
   layers:
   - Default
   - TransparentFX
