@@ -9,6 +9,10 @@ public class ItemSpawning : MonoBehaviour
     [Range(0,1)] [SerializeField] private float density = 0;
     [SerializeField] private float[] xRange = {0,1};
     [SerializeField] private float[] zRange = {0,1};
+
+    [SerializeField] private float[] xOffsets = {0,1};
+
+    [SerializeField] private float[] zOffsets = {0,1};
     [SerializeField] private float yValue = 1;
     [SerializeField] private float ySpawnOffset = 0;
 
@@ -34,11 +38,11 @@ public class ItemSpawning : MonoBehaviour
                     {
                         SpawnItem(item);
                     }
-                    transform.Translate(Vector3.right * Random.Range(1000, 10000));
+                    transform.Translate(Vector3.right * Random.Range(xOffsets[0], xOffsets[1]));
                 }
                 transform.position = new Vector3(xRange[0], transform.position.y, transform.position.z);
             }
-            transform.Translate(Vector3.forward * Random.Range(10, 100));
+            transform.Translate(Vector3.forward * Random.Range(zOffsets[0], zOffsets[1]));
         }
         
     }
