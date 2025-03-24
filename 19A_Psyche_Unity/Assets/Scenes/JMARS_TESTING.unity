@@ -770,6 +770,9 @@ MonoBehaviour:
   zRange:
   - -4000
   - 1000
+  xOffsets:
+  - 0
+  - 1
   yValue: 700
   ySpawnOffset: 3
   maxRayDist: 5000
@@ -3997,6 +4000,26 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3139450897356179292, guid: 5172faf847ad4844ca80a6de73a0c077, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3139450897356179292, guid: 5172faf847ad4844ca80a6de73a0c077, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3139450897356179292, guid: 5172faf847ad4844ca80a6de73a0c077, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3139450897356179292, guid: 5172faf847ad4844ca80a6de73a0c077, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3139450897356179292, guid: 5172faf847ad4844ca80a6de73a0c077, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4070683099620846087, guid: 5172faf847ad4844ca80a6de73a0c077, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -4021,6 +4044,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: TerrainMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 6272253397911614441, guid: 5172faf847ad4844ca80a6de73a0c077, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6272253397911614441, guid: 5172faf847ad4844ca80a6de73a0c077, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6272253397911614441, guid: 5172faf847ad4844ca80a6de73a0c077, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6272253397911614441, guid: 5172faf847ad4844ca80a6de73a0c077, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6272253397911614441, guid: 5172faf847ad4844ca80a6de73a0c077, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6750543026810373562, guid: 5172faf847ad4844ca80a6de73a0c077, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -4033,18 +4076,6 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1224130630}
-    - target: {fileID: 8357708240514414678, guid: 5172faf847ad4844ca80a6de73a0c077, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8357708240514414678, guid: 5172faf847ad4844ca80a6de73a0c077, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8357708240514414678, guid: 5172faf847ad4844ca80a6de73a0c077, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8748931107943917927, guid: 5172faf847ad4844ca80a6de73a0c077, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
