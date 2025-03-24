@@ -773,6 +773,9 @@ MonoBehaviour:
   xOffsets:
   - 0
   - 1
+  zOffsets:
+  - 0
+  - 1
   yValue: 700
   ySpawnOffset: 3
   maxRayDist: 5000
