@@ -10,16 +10,31 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1084110790103233216, guid: b068fcdde0c697d46910ff599155a7b1, type: 3}
       propertyPath: m_text
-      value: "Iron makes up an average of about 14% of Mars's crust, a significantly
-        higher concentration than found in Earth's crust. This abundance of iron
-        is one reason why the Martian surface appears reddish, as the iron reacts
-        with oxygen to form iron oxides\u2014essentially rust. These iron-rich minerals
-        not only color the planet but also provide clues about Mars's geological
-        history and potential resources for future exploration."
+      value: "Aluminum makes up about 5.6% of Mars's crust and is commonly found
+        in volcanic rocks and clay minerals across the planet\u2019s surface. Its
+        presence offers clues about past water activity and the chemical weathering
+        processes that shaped Mars over time. Aluminum's abundance also makes it
+        a potential resource for construction and manufacturing in future missions.
+        NASA\u2019s Psyche Mission, by exploring a largely metallic asteroid, is
+        providing valuable insights into the composition and resource potential of
+        metal-rich bodies\u2014knowledge that could inform future strategies for
+        utilizing materials like aluminum beyond Earth."
       objectReference: {fileID: 0}
     - target: {fileID: 1084110790103233216, guid: b068fcdde0c697d46910ff599155a7b1, type: 3}
       propertyPath: m_fontSize
-      value: 0.035
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 1084110790103233216, guid: b068fcdde0c697d46910ff599155a7b1, type: 3}
+      propertyPath: m_margin.w
+      value: 0.08545816
+      objectReference: {fileID: 0}
+    - target: {fileID: 1084110790103233216, guid: b068fcdde0c697d46910ff599155a7b1, type: 3}
+      propertyPath: m_margin.y
+      value: 0.06683731
+      objectReference: {fileID: 0}
+    - target: {fileID: 1084110790103233216, guid: b068fcdde0c697d46910ff599155a7b1, type: 3}
+      propertyPath: m_margin.z
+      value: 0.04687673
       objectReference: {fileID: 0}
     - target: {fileID: 1084110790103233216, guid: b068fcdde0c697d46910ff599155a7b1, type: 3}
       propertyPath: m_fontSizeMax
@@ -31,7 +46,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1084110790103233216, guid: b068fcdde0c697d46910ff599155a7b1, type: 3}
       propertyPath: m_fontSizeBase
-      value: 0.035
+      value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: 1084110790103233216, guid: b068fcdde0c697d46910ff599155a7b1, type: 3}
       propertyPath: m_lineSpacingMax
@@ -48,7 +63,7 @@ PrefabInstance:
     - target: {fileID: 1972991010375519260, guid: b068fcdde0c697d46910ff599155a7b1, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6ea8eb9c2fefb4749bcf4d3c0e7472a8, type: 2}
+      objectReference: {fileID: 2100000, guid: 75d4800b6c2e22d419bb60aa6b2c9a26, type: 2}
     - target: {fileID: 4979582754434991045, guid: b068fcdde0c697d46910ff599155a7b1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -89,6 +104,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5073854776370542082, guid: b068fcdde0c697d46910ff599155a7b1, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.012
+      objectReference: {fileID: 0}
+    - target: {fileID: 5073854776370542082, guid: b068fcdde0c697d46910ff599155a7b1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.008
+      objectReference: {fileID: 0}
     - target: {fileID: 5172248208139076078, guid: b068fcdde0c697d46910ff599155a7b1, type: 3}
       propertyPath: m_Size.z
       value: 0.6889436
@@ -99,7 +122,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7338648864262272589, guid: b068fcdde0c697d46910ff599155a7b1, type: 3}
       propertyPath: m_Name
-      value: Iron
+      value: Aluminum
       objectReference: {fileID: 0}
     - target: {fileID: 8236377220074320427, guid: b068fcdde0c697d46910ff599155a7b1, type: 3}
       propertyPath: m_Mesh

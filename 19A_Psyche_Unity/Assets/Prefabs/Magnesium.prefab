@@ -10,16 +10,30 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1084110790103233216, guid: b068fcdde0c697d46910ff599155a7b1, type: 3}
       propertyPath: m_text
-      value: "Iron makes up an average of about 14% of Mars's crust, a significantly
-        higher concentration than found in Earth's crust. This abundance of iron
-        is one reason why the Martian surface appears reddish, as the iron reacts
-        with oxygen to form iron oxides\u2014essentially rust. These iron-rich minerals
-        not only color the planet but also provide clues about Mars's geological
-        history and potential resources for future exploration."
+      value: "Magnesium accounts for roughly 5.5% of Mars's crust, playing a key
+        role in the planet\u2019s volcanic rocks and mineral composition. Its presence
+        helps scientists better understand the planet\u2019s mantle and geological
+        evolution. Magnesium is also a valuable resource for future human exploration
+        due to its potential use in lightweight alloys. NASA's Psyche Mission, while
+        focused on a metal-rich asteroid, aims to deepen our understanding of how
+        planets form and differentiate\u2014insights that could also apply to magnesium-rich
+        regions on Mars."
       objectReference: {fileID: 0}
     - target: {fileID: 1084110790103233216, guid: b068fcdde0c697d46910ff599155a7b1, type: 3}
       propertyPath: m_fontSize
-      value: 0.035
+      value: 0.033
+      objectReference: {fileID: 0}
+    - target: {fileID: 1084110790103233216, guid: b068fcdde0c697d46910ff599155a7b1, type: 3}
+      propertyPath: m_margin.w
+      value: 0.08545816
+      objectReference: {fileID: 0}
+    - target: {fileID: 1084110790103233216, guid: b068fcdde0c697d46910ff599155a7b1, type: 3}
+      propertyPath: m_margin.y
+      value: 0.08027458
+      objectReference: {fileID: 0}
+    - target: {fileID: 1084110790103233216, guid: b068fcdde0c697d46910ff599155a7b1, type: 3}
+      propertyPath: m_margin.z
+      value: 0.04687673
       objectReference: {fileID: 0}
     - target: {fileID: 1084110790103233216, guid: b068fcdde0c697d46910ff599155a7b1, type: 3}
       propertyPath: m_fontSizeMax
@@ -31,7 +45,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1084110790103233216, guid: b068fcdde0c697d46910ff599155a7b1, type: 3}
       propertyPath: m_fontSizeBase
-      value: 0.035
+      value: 0.033
       objectReference: {fileID: 0}
     - target: {fileID: 1084110790103233216, guid: b068fcdde0c697d46910ff599155a7b1, type: 3}
       propertyPath: m_lineSpacingMax
@@ -48,7 +62,7 @@ PrefabInstance:
     - target: {fileID: 1972991010375519260, guid: b068fcdde0c697d46910ff599155a7b1, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6ea8eb9c2fefb4749bcf4d3c0e7472a8, type: 2}
+      objectReference: {fileID: 2100000, guid: 64b5b85e8f9832b4d9efb004fdea579b, type: 2}
     - target: {fileID: 4979582754434991045, guid: b068fcdde0c697d46910ff599155a7b1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -89,6 +103,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5073854776370542082, guid: b068fcdde0c697d46910ff599155a7b1, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.012
+      objectReference: {fileID: 0}
+    - target: {fileID: 5073854776370542082, guid: b068fcdde0c697d46910ff599155a7b1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.008
+      objectReference: {fileID: 0}
     - target: {fileID: 5172248208139076078, guid: b068fcdde0c697d46910ff599155a7b1, type: 3}
       propertyPath: m_Size.z
       value: 0.6889436
@@ -99,7 +121,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7338648864262272589, guid: b068fcdde0c697d46910ff599155a7b1, type: 3}
       propertyPath: m_Name
-      value: Iron
+      value: Magnesium
       objectReference: {fileID: 0}
     - target: {fileID: 8236377220074320427, guid: b068fcdde0c697d46910ff599155a7b1, type: 3}
       propertyPath: m_Mesh
