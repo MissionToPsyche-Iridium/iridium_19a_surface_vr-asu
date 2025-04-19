@@ -156,3 +156,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isRover: 1
   forceMultiplier: 10
+  rotationStrength: 5
