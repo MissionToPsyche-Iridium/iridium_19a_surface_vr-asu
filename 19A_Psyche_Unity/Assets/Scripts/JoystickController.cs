@@ -15,6 +15,7 @@ public class JoystickController : MonoBehaviour
 
     public GameObject controlledObject;
 
+    private GameObject roverCheckpointManager;
     private Rigidbody topRb;
     private Rigidbody controlledObjectRb;
     private ReactToJoystick controlledObjectReact;
@@ -31,6 +32,7 @@ public class JoystickController : MonoBehaviour
         topRb = topOfJoystick.gameObject.GetComponent<Rigidbody>();
         controlledObjectRb = controlledObject.GetComponent<Rigidbody>();
         controlledObjectReact = controlledObject.GetComponent<ReactToJoystick>();
+        roverCheckpointManager = GameObject.FindGameObjectWithTag("CheckpointManager");
     }
 
     private void FixedUpdate()
@@ -48,6 +50,7 @@ public class JoystickController : MonoBehaviour
         topRb.constraints = RigidbodyConstraints.None;
         controlledObjectRb.constraints = RigidbodyConstraints.FreezeRotation;
         isGrabbed = true;
+        roverCheckpointManager.GetComponent<CheckpointManager>().runTime = true;
     }
 
     public void OnHandRelease()

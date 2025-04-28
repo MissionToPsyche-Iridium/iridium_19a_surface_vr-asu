@@ -7,6 +7,9 @@ using UnityEngine;
 public class CheckpointManager : MonoBehaviour
 {
     public int score = 0;
+    public float timePassed = 0f;
+    public float bestTime = 0f;
+    public bool runTime = false;
     public TextMeshProUGUI scoreText;
 
     private ParticleSystem particles;
@@ -19,10 +22,24 @@ public class CheckpointManager : MonoBehaviour
 
     void Update()
     {
-        if(score >= 7)
+        scoreText.text = "Current Score: " + score + '\n' + '\n' + "Current time: " + timePassed.ToString("0.000") + '\n' + '\n' + "Best time: " + bestTime.ToString("0.000");
+
+        if(runTime)
+        {
+            timePassed += Time.deltaTime;
+        }    
+    }
+
+    public void Celebration()
+    {
+        if (score >= 7)
         {
             particles.Play();
+            runTime = false;
+            if (timePassed < bestTime || bestTime == 0f)
+            {
+                bestTime = timePassed;
+            }
         }
-        scoreText.text = "Current Score: " + score;
     }
 }

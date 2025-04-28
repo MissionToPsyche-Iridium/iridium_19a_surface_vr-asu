@@ -9,6 +9,7 @@ public class BidirectionalJoystickController : MonoBehaviour
     public Transform negativeDir;
 
     public GameObject controlledObject;
+    private GameObject roverCheckpointManager;
 
     private Rigidbody topRb;
     private Rigidbody controlledObjectRb;
@@ -30,6 +31,7 @@ public class BidirectionalJoystickController : MonoBehaviour
         startingRot = topOfJoystick.rotation;
         controlledObjectRb = controlledObject.GetComponent<Rigidbody>();
         controlledObjectReact = controlledObject.GetComponent<ReactToJoystick>();
+        roverCheckpointManager = GameObject.FindGameObjectWithTag("CheckpointManager");
     }
 
     private void FixedUpdate()
@@ -53,6 +55,7 @@ public class BidirectionalJoystickController : MonoBehaviour
         topRb.constraints = RigidbodyConstraints.None;
         controlledObjectRb.constraints = RigidbodyConstraints.FreezeRotation;
         isGrabbed = true;
+        roverCheckpointManager.GetComponent<CheckpointManager>().runTime = true;
     }
 
     public void OnHandRelease()

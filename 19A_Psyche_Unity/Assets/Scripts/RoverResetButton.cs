@@ -10,10 +10,12 @@ public class RoverResetButton : MonoBehaviour
     Transform roverStart;
     public GameObject rover;
     Rigidbody roverRb;
+    public Checkpoint[] checkpoints;
 
     private Transform unpressed;
     private Transform pressed;
     private Transform button;
+    private GameObject roverCheckpointManager;
 
 
 
@@ -27,6 +29,7 @@ public class RoverResetButton : MonoBehaviour
         roverStart = GameObject.FindGameObjectWithTag("RoverStart").transform;
         //rover = GameObject.FindGameObjectWithTag("Rover");
         roverRb = rover.GetComponent<Rigidbody>();
+        roverCheckpointManager = GameObject.FindGameObjectWithTag("CheckpointManager");
     }
 
     public void OnButtonPress()
@@ -38,6 +41,13 @@ public class RoverResetButton : MonoBehaviour
         roverRb.velocity = Vector3.zero;
         roverRb.constraints = RigidbodyConstraints.FreezeAll;
         rover.SetActive(false);
+        roverCheckpointManager.GetComponent<CheckpointManager>().score = 0;
+        roverCheckpointManager.GetComponent<CheckpointManager>().timePassed = 0;
+        roverCheckpointManager.GetComponent<CheckpointManager>().runTime = false;
+        for (int i = 0; i < checkpoints.Length; i++)
+        {
+            checkpoints[i].hasTriggered = false;
+        }
     }
 
     public void OnButtonRelease()
