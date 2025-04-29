@@ -11,6 +11,9 @@ TagManager:
   - RoverStart
   - RoverResetButton
   - CheckpointManager
+  - EarthBall
+  - MarsBall
+  - PsycheBall
   layers:
   - Default
   - TransparentFX
