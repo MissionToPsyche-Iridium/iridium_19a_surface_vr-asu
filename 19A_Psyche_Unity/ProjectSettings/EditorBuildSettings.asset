@@ -9,9 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/MainHubExhibit.unity
     guid: 16a57400166f79b40867ee0ed94d5e67
   - enabled: 1
-    path: Assets/Scenes/JMARS_TESTING.unity
-    guid: a17bb1d8334d14d41b67aadee25b8d73
-  - enabled: 1
     path: Assets/Scenes/NewTerrainTesting.unity
     guid: cf6a20e75bc723c47b7adce9260ab727
   m_configObjects:

@@ -11,7 +11,7 @@ using UnityEngine.Serialization;
 //using XRController = XRControls.XRController;
 
 // ReSharper disable All
-using UnityEditor.TerrainTools;
+//using UnityEditor.TerrainTools;
 namespace TerrainEngine
 {
     public class PerPixelDataReader : MonoBehaviour
