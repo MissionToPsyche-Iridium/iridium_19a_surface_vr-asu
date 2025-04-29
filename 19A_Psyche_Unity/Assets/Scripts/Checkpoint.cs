@@ -5,7 +5,7 @@ using UnityEngine;
 public class Checkpoint : MonoBehaviour
 {
     private GameObject manager;
-    private bool hasTriggered = false;
+    public bool hasTriggered = false;
 
     private ParticleSystem particles;
 
@@ -22,8 +22,8 @@ public class Checkpoint : MonoBehaviour
         {
             manager.GetComponent<CheckpointManager>().score++;
             hasTriggered = true;
-            Debug.Log(manager.GetComponent<CheckpointManager>().score);
             particles.Play();
+            manager.GetComponent<CheckpointManager>().Celebration();
         }
     }
 
